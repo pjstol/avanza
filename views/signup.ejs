@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <% include ./partials/head %>
+</head>
+<body class="container">
+    <header>
+        <% include ./partials/header %>
+    </header>
+    
+        <form method="post" action="/users/signup">
+          <p>
+            <label>Username:</label>
+            <input type="text" name="username">
+          </p>
+          <p>
+            <label>Email:</label>
+            <input type="email" name="email">
+          </p>
+          <p>
+            <label>Password:</label>
+            <input type="password" name="password">
+          </p>
+          <p>
+            <input class="btn btn-success" type="submit" value="Signup">
+          </p>
+        </form>
+        
+    <footer>
+        <% include ./partials/footer %>
+    </footer>
+</body>
