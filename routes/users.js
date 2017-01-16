@@ -7,7 +7,7 @@ var User = require('../models/user');
 
 // Register
 router.get('/signup', function(req, res){
-	res.render('signup', {title: "Signup on Cloud9"});
+	res.render('signup', {title: "Registrar Nuevo Usuario"});
 });
 
 // Login
@@ -22,19 +22,17 @@ router.get('/dashboard', function(req, res){
 
 // Register User
 router.post('/signup', function(req, res){
-	
+
 	var email = req.body.email;
 	var username = req.body.username;
 	var password = req.body.password;
-	
 
 	// Validation
-	
+
 	req.checkBody('email', 'Email is required').notEmpty();
 	req.checkBody('email', 'Email is not valid').isEmail();
 	req.checkBody('username', 'Username is required').notEmpty();
 	req.checkBody('password', 'Password is required').notEmpty();
-	
 
 	var errors = req.validationErrors();
 
@@ -66,7 +64,6 @@ passport.use(new LocalStrategy(
    	if(!user){
    		return done(null, false, {message: 'El Usuario '+username+' no existe en nuestra base de datos, favor contactanos'});
    	}
-
    	User.comparePassword(password, user.password, function(err, isMatch){
    		if(err) throw err;
    		if(isMatch){
