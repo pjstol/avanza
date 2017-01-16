@@ -16,6 +16,7 @@ var UserSchema = mongoose.Schema({
 	profile: {
 		name: String,
 		lastname: String,
+    company: String,
     gender: String,
     address: String,
     website: String,

@@ -9,6 +9,15 @@
 <body>
 <div class="mdl-grid">
   <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    <% if ( success_msg.length > 0 ) { %>
+      <div class="alert alert-success"><%= success_msg %></div>
+    <% } %>
+    <% if ( error_msg.length > 0 ) { %>
+      <div class="alert alert-danger"><%= success_msg %></div>
+    <% } %>
+    <% if (error.length > 0) { %>
+      <div class="alert alert-danger"><%= error %></div>
+    <% } %>
   	<main class="mdl-layout__content">
   		<div class="mdl-card mdl-shadow--6dp">
   			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">

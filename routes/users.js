@@ -62,14 +62,14 @@ passport.use(new LocalStrategy(
    User.getUserByUsername(username, function(err, user){
    	if(err) throw err;
    	if(!user){
-   		return done(null, false, {message: 'El Usuario '+username+' no existe en nuestra base de datos, favor contactanos'});
+   		return done(null, false, {message: 'El usuario '+username+' no existe en nuestra base de datos, favor contactanos'});
    	}
    	User.comparePassword(password, user.password, function(err, isMatch){
    		if(err) throw err;
    		if(isMatch){
    			return done(null, user);
    		} else {
-   			return done(null, false, {message: 'Password Incorrecto, por favor intenta nuevamente'});
+   			return done(null, false, {message: 'Password incorrecto, por favor intenta nuevamente o comunicate con nosotros'});
    		}
    	});
    });
@@ -93,9 +93,7 @@ router.post('/login',
 
 router.get('/logout', function(req, res){
 	req.logout();
-
 	req.flash('success_msg', 'You are logged out');
-
 	res.redirect('/users/login');
 });
 
