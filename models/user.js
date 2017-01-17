@@ -16,11 +16,11 @@ var UserSchema = mongoose.Schema({
 	profile: {
 		name: String,
 		lastname: String,
+		phone: String,
     company: String,
-    gender: String,
     address: String,
     website: String,
-    picture: String
+    picture: String		
 	},
 });
 
