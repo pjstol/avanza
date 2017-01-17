@@ -26,6 +26,13 @@ router.post('/signup', function(req, res){
 	var email = req.body.email;
 	var username = req.body.username;
 	var password = req.body.password;
+	var name = req.body.name;
+	var lastname = req.body.lastname;
+	var address = req.body.address;
+	var phone = req.body.phone;
+	var address = req.body.address;
+	var empresa = req.body.empresa;
+	var website = req.body.website;
 
 	// Validation
 
@@ -44,7 +51,15 @@ router.post('/signup', function(req, res){
 		var newUser = new User({
 			username: username,
 			email:email,
-			password: password
+			password: password,
+			profile: {
+				name: name,
+				lastname: lastname,
+				phone: phone,
+				company: empresa,
+				address: address,
+				website: website
+			}
 		});
 
 		User.createUser(newUser, function(err, user){
