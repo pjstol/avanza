@@ -73,7 +73,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-//12. Using the routes
+//12. App routes
 app.use('/', index);
 app.use('/users', users);
 // app.use('/api', api);
