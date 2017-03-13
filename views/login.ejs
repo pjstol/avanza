@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>  
-  <% include ./partials/head %>
+<head>
+  <link rel="stylesheet" href="\css\angular-material.css">
+  <link rel="stylesheet" href="\css\login.css">
 </head>
 <body>
-<div class="mdl-grid">
-  <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-    <% if ( success_msg.length > 0 ) { %>
-      <div class="alert alert-success"><%= success_msg %></div>
-    <% } %>
-    <% if ( error_msg.length > 0 ) { %>
-      <div class="alert alert-danger"><%= success_msg %></div>
-    <% } %>
-    <% if (error.length > 0) { %>
-      <div class="alert alert-danger"><%= error %></div>
-    <% } %>
-  	<main class="mdl-layout__content">
-  		<div class="mdl-card mdl-shadow--6dp">
-  			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-  				<h2 class="mdl-card__title-text">Login</h2>
-  			</div>
-  	  	<div class="mdl-card__supporting-text">
-  				<form method="post" action="/users/login">
-  					<div class="mdl-textfield mdl-js-textfield">
-  						<input class="mdl-textfield__input" type="text" id="email" name="username">
-  						<label class="mdl-textfield__label" for="email">Usuario</label>
-  					</div>
-  					<div class="mdl-textfield mdl-js-textfield">
-  						<input class="mdl-textfield__input" type="password" id="userpass" name="password">
-  						<label class="mdl-textfield__label" for="userpass">Password</label>
-  					</div>
-  			</div>
-  			<div class="mdl-card__actions mdl-card--border">
-  				<input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="submit" value="Enviar">
-  			</div>
-  			</form>
-  		</div>
-  	</main>
+  <div ng-app="MyApp" ng-controller="AppCtrl" layout="column" layout-align="center center" layout-fill="layout-fill">
+    <div class="loginBox md-whiteframe-z1" layout="column">
+      <md-toolbar>
+        <h2 class="md-toolbar-tools"><span>Login</span></h2>
+      </md-toolbar>
+      <md-content class="md-padding" layout="column">
+        <md-input-container>
+          <label>Username</label>
+          <input type="email" ng-model="username">
+        </md-input-container>
+        <md-input-container>
+          <label>Password</label>
+          <input type="password" ng-model="password">
+        </md-input-container>
+        <div layout="row" layout-align="center center" style="padding-top:20px">
+          <md-button class="md-raised md-primary">Login</md-button>
+          <div flex="flex"></div>
+        </div>
+      </md-content>
+    </div>
   </div>
-</div>
-  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+
+  <!-- Angular Material Requirements -->
+  <script src="\js\bower_components\angular\angular.js"></script>
+  <script src="\js\bower_components\angular-animate\angular-animate.js"></script>
+  <script src="\js\bower_components\angular-aria\angular-aria.js"></script>
+  <script src="\js\bower_components\angular-messages\angular-messages.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src='\js\bower_components\angular-material\angular-material.js'></script>  
+  <script>
+    var app = angular.module('MyApp', ['ngMaterial']).controller('AppCtrl', function($scope){});
+  </script>
 </body>
 </html>
