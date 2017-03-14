@@ -20,7 +20,7 @@ var UserSchema = mongoose.Schema({
 		company: String,
 		address: String,
 		website: String,
-		picture: String		
+		picture: String
 	},
 });
 
