@@ -9,8 +9,10 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 
 //01. Connection to Database
-var mongoUrl = "mongodb://triton:12345@ds029735.mlab.com:29735/heroku_gsdtxvgc";
-mongoose.connect(mongoUrl);
+var database = require('./config/db')
+// var mongoUrl = "mongodb://triton:12345@ds029735.mlab.com:29735/heroku_gsdtxvgc";
+//Revisar si esta configuración sirve y si es posible dejar llamando todo desde ./config/db.js
+mongoose.connect(database.url);
 var db = mongoose.connection;
 
 //02. Routes
