@@ -10,6 +10,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
     .when('/login', {
       templateUrl: 'login.html',
       controller: 'loginController'
+    })
+
+    .when('/dashboard', {
+      templateUrl: 'dashboard.html',
+      controller: 'dashboardController'
     });
 
   $locationProvider
