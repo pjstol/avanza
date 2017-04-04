@@ -16,9 +16,9 @@ mongoose.connect(database.url);
 var db = mongoose.connection;
 
 //02. Routes
-var index = require('./routes/index');
-var api = require('./routes/api');
-var users = require('./routes/users');
+var index = require('./app/routes');
+// var users = require('./routes/users');
+// var api = require('./routes/api');
 
 //03. Inicio de la aplicación
 var app = express();
@@ -77,7 +77,7 @@ app.use(function (req, res, next) {
 
 //12. App routes
 app.use('/', index);
-app.use('/users', users);
+//app.use('/users', users);
 // app.use('/api', api);
 
 //13. Set Port

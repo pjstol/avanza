@@ -17,7 +17,8 @@
 </head>
 
 <!-- NAVBAR ================================================== -->
-<body id="top">
+<body ng-app="myApp">
+  <div ng-view></div>
   <div class="navbar-wrapper">
     <div class="container">
       <div class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -52,7 +53,7 @@
                   <li><a class="page-scroll" href="http://www.comansa.cl" target="_blank">Comansa</a></li>
                 </ul>
               </li>
-              <li><a class="page-scroll login" href="/users/login">Login</a></li>
+              <li><a class="page-scroll login" ng-href="/login">Login</a></li>
             </ul>
           </div>
         </div>
@@ -63,8 +64,7 @@
 
 
 
-  <!-- Carousel
-  ================================================== -->
+  <!-- Carousel ================================================== -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -154,16 +154,32 @@
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <!-- jQuery Version 1.11.0 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
   <!-- Bootstrap -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/docs.min.js"></script>
+  <!-- <script src="js\bootstrap.min.js"></script> -->
+  <!-- <script src="js\docs.min.js"></script> -->
   <!-- Scripts One Page Scrolling Nav -->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrolling-nav.js"></script>
+  <!-- <script src="js\jquery.easing.min.js"></script> -->
+  <!-- <script src="js\scrolling-nav.js"></script> -->
   <!-- Scripts para Google Maps -->
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script src="js/map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+  <!-- <script src="js\map.js"></script> -->
+
+  <!-- Angular Madness -->
+  <!-- Angular Material Requirements -->
+  <script src="\libs\angular\angular.js"></script>
+  <script src="\libs\angular-animate\angular-animate.js"></script>
+  <script src="\libs\angular-aria\angular-aria.js"></script>
+  <script src="\libs\angular-messages\angular-messages.js"></script>
+  <script src="\libs\angular-route\angular-route.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src='\libs\angular-material\angular-material.js'></script>
+
+  <!-- Angular Custom App Module -->
+  <script src="\js\controllers\loginControl.js"></script>
+  <script src="\js\appRoutes.js"></script>
+  <script src="\js\app.js"></script>
 
 </body>
 </html>
