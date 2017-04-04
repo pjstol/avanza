@@ -1,1 +1,1 @@
-var app = angular.module('myApp', ['ngMaterial', 'ngRoute', 'appRoutes', 'loginControl']);
+var app = angular.module('theapp', ['ngMaterial', 'ngRoute', 'appRoutes', 'loginControl', 'homeControl']);

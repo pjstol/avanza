@@ -2,6 +2,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
   $routeProvider
 
+    .when('/', {
+      templateUrl: 'home.html',
+      controller: 'homeController'
+    })
+
     .when('/login', {
       templateUrl: 'login.html',
       controller: 'loginController'
