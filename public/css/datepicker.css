@@ -620,3 +620,8 @@
   .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
     background: none;
     border: none; }
+
+.caelus {
+  width: 100%;
+  height: auto;
+}    

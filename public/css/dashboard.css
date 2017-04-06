@@ -4,8 +4,13 @@ md-sidenav  {
     background-color: #6bc7cc;
   }
 
-  md-content {
-    background-color : tan;
-    height:100%;
-    padding:20px;
-  }
+md-content {
+  background-color : tan;
+  height:100%;
+  padding:20px;
+}
+
+.caelus {
+  width: 100%;
+  height: auto;
+}
