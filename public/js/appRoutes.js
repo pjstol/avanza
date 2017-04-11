@@ -19,9 +19,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
   $locationProvider
 
-    .html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    .html5Mode(true)
+    .hashPrefix('');
+    
 
 }]);

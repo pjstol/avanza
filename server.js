@@ -76,8 +76,8 @@ app.use(function (req, res, next) {
 });
 
 //12. App routes
-app.use('/', index);
 app.use('/api', api);
+app.use('/', index);
 //app.use('/users', users);
 
 //13. Set Port
