@@ -7,7 +7,11 @@ var user = require('./models/user.js');
 //Server routes
 //Handling of API calls and authentication
 
-router.get('*', function(req,res){
+router.get('/', function(req,res){
+  res.render('home', {title: "Injenia"});
+});
+
+router.get('/app*', function(req,res){
   res.render('home', {title: "Injenia"});
 });
 

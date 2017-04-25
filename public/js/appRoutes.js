@@ -7,12 +7,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
       controller: 'homeController'
     })
 
-    .when('/login', {
+    .when('/app/login', {
       templateUrl: 'login.html',
       controller: 'loginController'
     })
 
-    .when('/dashboard', {
+    .when('/app/dashboard', {
       templateUrl: 'dashboard.html',
       controller: 'dashboardController'
     });
@@ -21,6 +21,5 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
     .html5Mode(true)
     .hashPrefix('');
-    
 
 }]);
