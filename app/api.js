@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var gcs = require('@google-cloud/storage')({
   projectId: 'express-test-158013',
-  keyFilename: 'public/express-test-4d5a2e930ec3.json'
+  keyFilename: 'public/express-test-ef762ebdf125.json'
 });
 
 var fotos = [];
